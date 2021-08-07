@@ -1,0 +1,14 @@
+<html>
+    <h1>Select a file</h1>
+    <input type="file" id="file-selector" multiple>
+    <script>
+        const fileSelector = document.getElementById('file-selector');
+        fileSelector.addEventListener('change', (event) => {
+            const fileList = event.target.files;
+            const reader = new FileReader();
+            console.log(reader.readAsText(fileList));
+            console.log(fileList);
+        });
+    </script>
+    <script src='input.js'></script>
+</html>
